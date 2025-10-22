@@ -32,7 +32,7 @@ export default function IntentSignalUnlockModal({
       <div
         className={cn(
           "fixed z-50 bg-white rounded-lg shadow-2xl p-6 border border-gray-200 max-w-sm",
-          position && "pointer-events-auto"
+          position && "pointer-events-auto",
         )}
         style={
           position
