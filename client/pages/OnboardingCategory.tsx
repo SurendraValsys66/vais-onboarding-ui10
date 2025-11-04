@@ -116,7 +116,7 @@ export default function OnboardingCategory() {
                   saveOnboarding({ vaisCategory: v as CategoryValue });
                 }
               }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-3"
+              className="grid grid-cols-2 gap-3"
             >
               {CATEGORY_OPTIONS.map((option) => (
                 <motion.div
@@ -126,18 +126,19 @@ export default function OnboardingCategory() {
                 >
                   <Label
                     htmlFor={`category-${option.label}`}
-                    className={`flex items-center gap-3 rounded-lg border p-3 cursor-pointer transition-colors ${
+                    className={`flex items-center gap-2 rounded-lg border-2 p-3 cursor-pointer transition-all ${
                       value === option.label
                         ? "border-valasys-orange bg-valasys-orange/5"
-                        : "border-valasys-gray-200 hover:border-valasys-orange/60"
+                        : "border-valasys-gray-200 hover:border-valasys-orange/40"
                     }`}
                   >
                     <RadioGroupItem
                       id={`category-${option.label}`}
                       value={option.label}
+                      className="h-5 w-5"
                     />
-                    <option.icon className="h-4 w-4 text-valasys-orange" />
-                    <span className="text-sm text-valasys-gray-800">
+                    <option.icon className="h-5 w-5 text-valasys-orange flex-shrink-0" />
+                    <span className="text-sm font-medium text-valasys-gray-900">
                       {option.label}
                     </span>
                   </Label>
@@ -145,7 +146,7 @@ export default function OnboardingCategory() {
               ))}
             </RadioGroup>
           </div>
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-2">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-4">
             <button
               type="button"
               onClick={onSkip}
