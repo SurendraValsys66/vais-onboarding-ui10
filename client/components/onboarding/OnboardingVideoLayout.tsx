@@ -60,6 +60,7 @@ export default function OnboardingVideoLayout({
                   <OnboardingPersonalizationPanel
                     values={summaryValues}
                     total={summaryTotal}
+                    currentStep={currentStep}
                   />
                 </div>
               </div>
