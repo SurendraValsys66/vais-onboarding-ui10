@@ -35,7 +35,6 @@ const ROLES = [
   { label: "Sales Representative", icon: UserRound },
 ] as const;
 
-
 export default function OnboardingRole() {
   const navigate = useNavigate();
   const initial = getOnboarding();

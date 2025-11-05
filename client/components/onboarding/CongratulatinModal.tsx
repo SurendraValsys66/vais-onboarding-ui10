@@ -49,8 +49,10 @@ export default function CongratulatinModal({
             </h2>
             <p className="text-sm text-gray-600">
               You've completed all the steps — enjoy your reward of{" "}
-              <span className="font-semibold text-orange-500">50 bonus credits</span>!{" "}
-              🎉
+              <span className="font-semibold text-orange-500">
+                50 bonus credits
+              </span>
+              ! 🎉
             </p>
           </div>
 
