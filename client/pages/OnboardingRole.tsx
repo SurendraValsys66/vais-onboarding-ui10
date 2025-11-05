@@ -84,7 +84,7 @@ export default function OnboardingRole() {
               setRole(v);
               if (v) saveOnboarding({ role: v });
             }}
-            className="flex flex-wrap gap-2"
+            className="space-y-3"
           >
             {ROLES.map((r) => (
               <motion.div
@@ -92,15 +92,24 @@ export default function OnboardingRole() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.99 }}
               >
-                <PillOption id={`role-${r.label}`} selected={role === r.label}>
+                <Label
+                  htmlFor={`role-${r.label}`}
+                  className={`flex items-center gap-3 rounded-lg border-2 p-4 cursor-pointer transition-all ${
+                    role === r.label
+                      ? "border-valasys-blue bg-valasys-blue/10 text-valasys-blue"
+                      : "border-valasys-gray-200 hover:border-valasys-blue/40"
+                  }`}
+                >
                   <RadioGroupItem
                     id={`role-${r.label}`}
                     value={r.label}
-                    className="sr-only"
+                    className="h-5 w-5"
                   />
-                  <r.icon className="h-4 w-4 text-valasys-blue" />
-                  <span>{r.label}</span>
-                </PillOption>
+                  <r.icon className="h-5 w-5 text-valasys-blue flex-shrink-0" />
+                  <span className="text-sm font-medium text-valasys-gray-900">
+                    {r.label}
+                  </span>
+                </Label>
               </motion.div>
             ))}
           </RadioGroup>
